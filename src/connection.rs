@@ -1,21 +1,25 @@
 use chrono::{DateTime, Local};
+use serde::{Serialize, Deserialize};
 
 struct CityInfo {
-    // TODO: define elements in the structure
+    city: String,
+    description: String,
+    temp: f32,
+    feel_like: f32,
+    humidity: f32,
+    pressure: f32,
+    wind: f32
 }
+const APIKEY: &str = "";
 
-/// Method that is handling the request to the OpenWeather api
-/// and parsing the response
-///
-/// Returns weather details about a certain city
 pub fn get_data(city: String) {
-    match reqwest::blocking::get("") {
+    let url = format!("http://api.openweathermap.org/geo/1.0/direct?q={}&limit={}&appid={}", city, 5, APIKEY);
+    match reqwest::blocking::get(url) {
         Ok(response) => {
-            // Check status code
-            // Parse response
+
         },
         Err(error) => {
-            // Handle error
+            
         }
     }
 }
