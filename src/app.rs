@@ -3,10 +3,9 @@ use std::error;
 /// Application result type.
 pub type AppResult<T> = Result<T, Box<dyn error::Error>>;
 
-/// Application.
+/// Application
 #[derive(Debug)]
 pub struct App {
-    /// Is the application running?
     pub running: bool,
 }
 

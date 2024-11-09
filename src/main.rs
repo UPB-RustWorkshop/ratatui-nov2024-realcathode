@@ -9,23 +9,23 @@ use ratatui::Terminal;
 #[tokio::main]
 async fn main() -> AppResult<()> {
     // Create an application.
-    // let app = 
+    let app = App::new();
 
     // Initialize the terminal user interface.
     let backend = CrosstermBackend::new(io::stderr());
     let terminal = Terminal::new(backend)?;
 
-    // TODO:  the terminal user interface
-    // let mut tui =
+    let tick_rate = 200;
+    let events = EventHandler::new(tick_rate);
+
+    let mut tui = Tui::new(terminal, events);
     
     // TODO: init the terminal
-
+    Tui::init(&mut tui);
     // Start the main loop.
     // while app.running {
-        // TODO: Render the user interface.
-
+        // TODO: Render the user interface. 
         // TODO: Handle events.
-        
     // }
 
     // TODO: Reset the terminal if the app has been terminated

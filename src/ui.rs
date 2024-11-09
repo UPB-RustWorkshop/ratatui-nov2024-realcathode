@@ -3,13 +3,10 @@ use crate::app::App;
 
 /// Renders the user interface widgets.
 pub fn render(app: &mut App, frame: &mut Frame) {
-    // This is where you add new widgets.
-    // See the following resources:
     // - https://docs.rs/ratatui/latest/ratatui/widgets/index.html
     // - https://github.com/ratatui/ratatui/tree/main/ratatui/examples
 
-    // TODO: Split the layout
-    // let [area1, area2, area3 ...] =
+    // let [area1] = 
 
     // TODO: get the list of cities
     // let cities: Vec<ListItem> =
