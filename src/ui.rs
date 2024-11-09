@@ -26,11 +26,13 @@ pub fn render(app: &mut App, frame: &mut Frame) {
 
     frame.render_widget(
         Paragraph::new("outer 0")
-            .block(Block::new().borders(Borders::ALL)),
+            .block(Block::new().title("Cities")
+            .borders(Borders::ALL)),
         outer_layout[0]);
     frame.render_widget(
         Paragraph::new("inner 0")
-            .block(Block::new().borders(Borders::ALL)),
+            .block(Block::new().title("Weather")
+            .borders(Borders::ALL)),
         inner_layout[0]);
     frame.render_widget(
         Paragraph::new("inner 1")
